@@ -6,6 +6,7 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int tireSize;
+
     public Truck(String name, String color, int tireSize) {
     }
 
