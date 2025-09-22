@@ -4,9 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import core.mate.academy.service.BulldozerProducer;
-import core.mate.academy.service.ExcavatorProducer;
-import core.mate.academy.service.TruckProducer;
 import java.util.Collections;
 import java.util.List;
 
