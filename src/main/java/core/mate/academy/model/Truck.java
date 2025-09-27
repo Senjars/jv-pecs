@@ -5,17 +5,20 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private int tireSize;
 
-    public Truck(String name, String color, int tireSize) {
+    private double price;
+
+    public Truck(String name, String color, double price) {
+        super(color, name);
+        this.price = price;
     }
 
-    public int getTireSize(int tireSize) {
-        return tireSize;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public void setTireSize(int tireSize) {
-        this.tireSize = tireSize;
+    public double getPrice() {
+        return price;
     }
 
     @Override

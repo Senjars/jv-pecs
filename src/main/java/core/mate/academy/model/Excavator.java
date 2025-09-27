@@ -1,17 +1,24 @@
 package core.mate.academy.model;
 
+/**
+ * Add some custom fields that could be only in Excavator
+ * Do not remove no-args constructor
+ */
 public class Excavator extends Machine {
-    private int hp;
 
-    public Excavator(String name, String color, int hp) {
+    private int year;
+
+    public Excavator(String name, String color, int year) {
+        super(color,name);
+        this.year = year;
     }
 
-    public int getHp(int hp) {
-        return hp;
+    public int getYear() {
+        return year;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setYear(int year) {
+        this.year = year;
     }
 
     @Override

@@ -1,17 +1,24 @@
 package core.mate.academy.model;
 
+/**
+ * Add some custom fields that could be only in Bulldozer
+ * Do not remove no-args constructor
+ */
 public class Bulldozer extends Machine {
-    private double price;
 
-    public Bulldozer(String name, String color, double price) {
+    private String model;
+
+    public Bulldozer(String name, String color, String model) {
+        super(name, color);
+        this.model = model;
     }
 
-    public double getPrice(double price) {
-        return price;
+    public String getModel() {
+        return model;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     @Override
