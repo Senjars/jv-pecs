@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T>{
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
     public void fill(List machines, Machine value) {
