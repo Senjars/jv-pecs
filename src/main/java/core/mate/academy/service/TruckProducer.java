@@ -13,5 +13,5 @@ public class TruckProducer implements MachineProducer<Truck> {
                 new Truck("Cat", "Blue", 3213.21),
                 new Truck("Volvo", "Green", 543343.21)
         ));
-        }
+    }
 }
