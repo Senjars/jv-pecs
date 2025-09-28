@@ -12,7 +12,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int year) {
-        super(color,name);
+        super(name, color);
         this.year = year;
     }
 

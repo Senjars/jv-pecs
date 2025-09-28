@@ -5,6 +5,7 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
@@ -20,7 +21,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         if (type == Excavator.class) {
             return new ArrayList<>(new ExcavatorProducer().get());
         }
-        throw new IllegalArgumentException("Unsupported machine type: " + type.getName());
+        return Collections.emptyList();
     }
 
     @Override

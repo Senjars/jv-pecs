@@ -12,7 +12,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, double price) {
-        super(color, name);
+        super(name, color);
         this.price = price;
     }
 
