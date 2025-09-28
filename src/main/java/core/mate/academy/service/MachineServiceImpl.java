@@ -4,6 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,24 +13,24 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
-    public void fill(List machines, Machine value) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        if (type == Bulldozer.class) {
+            return new ArrayList<>(new BulldozerProducer().get());
         }
+        if (type == Truck.class) {
+            return new ArrayList<>(new TruckProducer().get());
+        }
+        if (type == Excavator.class) {
+            return new ArrayList<>(new ExcavatorProducer().get());
+        }
+        throw new IllegalArgumentException("Unsupported machine type: " + type.getName());
     }
 
     @Override
-    public List getAll(Class type) {
-        if (type == Bulldozer.class) {
-            return new BulldozerProducer().get();
+    public <U extends Machine> void fill(List<? super U> machines, U value) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
         }
-        if (type == Truck.class) {
-            return new TruckProducer().get();
-        }
-        if (type == Excavator.class) {
-            return new ExcavatorProducer().get();
-        }
-        throw new IllegalArgumentException("Unsupported machine type: " + type.getName());
     }
 
     @Override

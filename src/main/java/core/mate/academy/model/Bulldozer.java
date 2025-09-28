@@ -8,6 +8,8 @@ public class Bulldozer extends Machine {
 
     private String model;
 
+    public Bulldozer(){}
+
     public Bulldozer(String name, String color, String model) {
         super(name, color);
         this.model = model;

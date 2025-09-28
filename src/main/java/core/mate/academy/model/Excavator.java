@@ -8,6 +8,8 @@ public class Excavator extends Machine {
 
     private int year;
 
+    public Excavator() {}
+
     public Excavator(String name, String color, int year) {
         super(color,name);
         this.year = year;

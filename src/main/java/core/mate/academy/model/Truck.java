@@ -8,6 +8,8 @@ public class Truck extends Machine {
 
     private double price;
 
+    public Truck() {}
+
     public Truck(String name, String color, double price) {
         super(color, name);
         this.price = price;
